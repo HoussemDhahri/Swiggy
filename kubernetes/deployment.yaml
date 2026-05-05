@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: swiggy
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: swiggy
+  template:
+    metadata:
+      labels:
+        app: swiggy
+    spec:
+      containers:
+      - name: swiggy
+        image: houssemdhahri93/swiggy-app:143
+        ports:
+        - containerPort: 3000

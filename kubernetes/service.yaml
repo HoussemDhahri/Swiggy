@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: swiggy-service
+spec:
+  selector:
+    app: swiggy
+  ports:
+  type: NodePort
+    port: 3000
+    targetPort: 3000
+  
